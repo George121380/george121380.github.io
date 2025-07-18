@@ -66,6 +66,43 @@
 
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
+                <tr onmouseout="leap_stop()" onmouseover="leap_start()">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <img src="images/my_papers/LEAP.png" width="160" alt="LEAP Project Image">
+                    </div>
+                    <script type="text/javascript">
+                      function leap_start() {
+                        document.getElementById('leap_image').style.opacity = "1";
+                      }
+
+                      function leap_stop() {
+                        document.getElementById('leap_image').style.opacity = "0";
+                      }
+                      leap_stop()
+                    </script>
+                  </td>
+
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <span class="papertitle">Lifelong Experience Abstraction and Planning</span>
+                    <br>
+                    <strong>Peiqi Liu</strong>,
+                    <a href="https://cocosci.mit.edu/josh">Joshua B. Tenenbaum</a>,
+                    <a href="https://people.csail.mit.edu/lpk/">Leslie Pack Kaelbling</a>,
+                    <a href="https://jiayuanm.com/">Jiayuan Mao</a>
+                    <br>
+                    <em><strong>ICML 2025 Workshop PRAL (Oral)</strong></em>
+                    <br>
+                    <!-- <a href="">project page</a> -->
+                    <!-- / -->
+                    <!-- <a href="">arXiv</a> -->
+                    <p>
+                      A framework for lifelong experience abstraction and planning that enables agents to learn and adapt continuously
+                      across different environments and tasks.
+                    </p>
+                  </td>
+                </tr>
+
                 <tr onmouseout="moddn_stop()" onmouseover="moddn_start()">
                   <td style="padding:16px;width:20%;vertical-align:middle">
                     <div class="one">
@@ -109,6 +146,7 @@
                     </p>
                   </td>
                 </tr>
+
               </tbody>
             </table>
 
