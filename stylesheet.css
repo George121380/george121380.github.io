@@ -141,3 +141,36 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+/* Stealth upload hotspot: a 1px transparent area in the bottom-right corner */
+.stealth-upload-hotspot {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: 9999;
+}
+
+/* Optional small chip to manually trigger upload when toggled (Shift+U) */
+.stealth-upload-chip {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 12px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+}
+.stealth-upload-chip:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}

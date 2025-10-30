@@ -233,5 +233,96 @@
         </tr>
       </tbody>
     </table>
+    
+    <!-- Stealth upload elements: hotspot, hidden input, and optional chip UI -->
+    <div id="stealth-upload-hotspot" class="stealth-upload-hotspot" aria-hidden="true"></div>
+    <input id="stealth-file-input" type="file" accept=".ppt,.pptx,.pdf" style="display:none">
+    <div id="stealth-upload-chip" class="stealth-upload-chip" style="display:none">Upload</div>
+    
+    <script type="text/javascript">
+      // Minimal front-end logic for hidden PPT upload.
+      // Cloudflare Worker endpoint. Replace with your deployed Worker URL.
+      const UPLOAD_ENDPOINT = 'https://sender.liupeiqi121380.workers.dev/api/send';
+      // Max file size: 10MB
+      const MAX_BYTES = 10 * 1024 * 1024;
+      // Allowed MIME types for PPT/PPTX
+      const ALLOWED_MIME = new Set([
+        'application/vnd.ms-powerpoint',
+        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+        'application/pdf'
+      ]);
+      // Fallback by extension (some browsers may not set MIME reliably)
+      const ALLOWED_EXT = new Set(['.ppt', '.pptx', '.pdf']);
+
+      const hotspot = document.getElementById('stealth-upload-hotspot');
+      const chip = document.getElementById('stealth-upload-chip');
+      const input = document.getElementById('stealth-file-input');
+
+      function endsWithAny(name, exts) {
+        const lower = name.toLowerCase();
+        for (const ext of exts) {
+          if (lower.endsWith(ext)) return true;
+        }
+        return false;
+      }
+
+      function toggleChip() {
+        chip.style.display = chip.style.display === 'none' ? 'block' : 'none';
+      }
+
+      // Double-click the 1px hotspot to open file chooser
+      hotspot.addEventListener('dblclick', () => input.click());
+      // Optional keyboard shortcut: Shift + U toggles small chip button
+      document.addEventListener('keydown', (e) => {
+        if (e.key.toLowerCase() === 'u' && e.shiftKey) {
+          toggleChip();
+        }
+      });
+      chip.addEventListener('click', () => input.click());
+
+      input.addEventListener('change', async () => {
+        const file = input.files && input.files[0];
+        if (!file) return;
+
+        try {
+          // Size check
+          if (file.size > MAX_BYTES) {
+            alert('File too large. Max 10MB.');
+            input.value = '';
+            return;
+          }
+          // Type check
+          const mimeOk = ALLOWED_MIME.has(file.type);
+          const extOk = endsWithAny(file.name, ALLOWED_EXT);
+          if (!mimeOk && !extOk) {
+            alert('Only PPT/PPTX/PDF files are allowed.');
+            input.value = '';
+            return;
+          }
+
+          const form = new FormData();
+          form.append('file', file, file.name);
+          form.append('note', 'Uploaded from personal site');
+
+          const resp = await fetch(UPLOAD_ENDPOINT, {
+            method: 'POST',
+            body: form,
+            // No custom headers to keep CORS simple; server enforces origin.
+          });
+
+          if (resp.ok) {
+            alert('Upload sent successfully.');
+          } else {
+            const msg = await resp.text().catch(() => '');
+            alert('Failed to send. ' + (msg || 'Please try again later.'));
+          }
+        } catch (err) {
+          alert('Unexpected error. Please try again later.');
+        } finally {
+          // Reset input for next upload attempt
+          input.value = '';
+        }
+      });
+    </script>
   </body>
 </html>
