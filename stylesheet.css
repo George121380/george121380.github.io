@@ -141,3 +141,12 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.research-now {
+  color: #5f6c7b;
+  font-style: italic;
+}
+
+.research-now strong {
+  color: inherit;
+}
