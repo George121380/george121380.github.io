@@ -150,3 +150,54 @@ span.highlight {
 .research-now strong {
   color: inherit;
 }
+
+@media (max-width: 700px) {
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a,
+  strong {
+    font-size: 15px;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  td {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  img[src="images/avatar/avt_updated.jpg"] {
+    display: block;
+    width: 70% !important;
+    max-width: 220px !important;
+    margin: 0 auto 12px;
+  }
+
+  .name {
+    padding-top: 12px;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .one {
+    width: 160px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+}
