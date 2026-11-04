@@ -10,7 +10,7 @@ No dependency installation or build is required. The page is readable without Ja
 
 ## November 2026 revision
 
-This review version is on `codex/homepage-refresh-20261103`, in a separate Git worktree. The original `master` checkout and live website are unchanged. The baseline is commit `a9bde85`.
+This revision was prepared and reviewed on `codex/homepage-refresh-20261103`, in a separate Git worktree. The approved version is published through the repository's `master` branch and GitHub Pages at https://peiqil.com/. The original homepage is preserved at commit `a9bde85` and tag `homepage-before-refresh-20261103`.
 
 Changes:
 
@@ -38,7 +38,7 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-revi
 
 Open http://127.0.0.1:8766/ for desktop, mobile-width, and comparison with the previous academic design. The website also opens directly from this worktree's `index.html` without a running server.
 
-To reject the draft, continue using the original `george121380.github.io` checkout. The preceding media revision is preserved at commit `4c4759c` and in the `academic-v5` comparison snapshot. This BiDex research-reel pass is a separate commit and can be undone with `git revert <research-reel-commit>`. Earlier academic design commits are `4c4759c`, `c7548e3`, `40cf6a7`, and `0c869fb`; to undo the whole redesign after merging, revert these changes in reverse chronological order. Do not reset or force-push shared history. No deployment or push is performed as part of preparing this draft.
+The preceding media revision is preserved at commit `4c4759c` and in the `academic-v5` comparison snapshot. The BiDex research-reel refinement is commit `74f643d`. Earlier academic design commits are `4c4759c`, `c7548e3`, `40cf6a7`, and `0c869fb`. To restore the entire pre-refresh homepage, restore the tree from `homepage-before-refresh-20261103` in a new commit and publish that commit through `master`. Individual changes can also be reverted normally. Do not reset or force-push shared history.
 
 ## Content and design references
 
