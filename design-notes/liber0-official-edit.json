@@ -1,0 +1,35 @@
+{
+  "source": "User-provided official LiberAI launch video, 3840x2160, 172.82 seconds",
+  "shots": [
+    {
+      "start": 129.3,
+      "duration": 2.4,
+      "label": "Adding ingredients"
+    },
+    {
+      "start": 135.2,
+      "duration": 3.5,
+      "label": "Dispensing tea"
+    },
+    {
+      "start": 155.0,
+      "duration": 5.2,
+      "label": "Closing the cup"
+    },
+    {
+      "start": 161.0,
+      "duration": 2.0,
+      "label": "Serving"
+    }
+  ],
+  "output": {
+    "frames": 195,
+    "duration": 13.0,
+    "size": [
+      640,
+      360
+    ],
+    "bytes": 11286694,
+    "loop": 0
+  }
+}

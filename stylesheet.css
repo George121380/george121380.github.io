@@ -49,9 +49,8 @@ h2 { font-size: 24px; font-weight: 500; letter-spacing: -.4px; line-height: 1.35
 a.paper-visual { cursor: pointer; }
 .paper-visual img { width: 100%; height: auto; max-height: 185px; object-fit: contain; border-radius: 3px; }
 .project-figure { min-width: 0; }
-#bidex .paper-visual img { max-height: none; }
 .project-animation { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #f2f2f2; border-radius: 3px; }
-.project-figure figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 12px; color: var(--muted); font-size: 12.5px; line-height: 1.6; margin-top: 7px; }
+#bidex .project-animation { aspect-ratio: 4 / 3; }
 .publication h3 { font-size: 18px; line-height: 1.45; font-weight: 600; letter-spacing: -.1px; }
 .publication h3 a { color: var(--ink); }
 .authors { font-size: 14.5px; color: #555b62; line-height: 1.7; margin-top: 7px; }

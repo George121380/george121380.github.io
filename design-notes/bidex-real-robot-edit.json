@@ -1,0 +1,62 @@
+{
+  "source": "2026-ECCV-BiDexAffordance/supp/BiDexAffordance_ICRA2027.mp4",
+  "source_size": [
+    1920,
+    1080
+  ],
+  "source_duration": 306.9,
+  "source_fps": 60,
+  "shots": [
+    {
+      "object": "cooking pot",
+      "start": 277.0,
+      "duration": 6.65,
+      "crop": [
+        616,
+        462,
+        1304,
+        618
+      ]
+    },
+    {
+      "object": "basket",
+      "start": 277.0,
+      "duration": 6.65,
+      "crop": [
+        632,
+        474,
+        8,
+        606
+      ]
+    },
+    {
+      "object": "pump bottle",
+      "start": 277.0,
+      "duration": 6.65,
+      "crop": [
+        548,
+        412,
+        716,
+        134
+      ]
+    }
+  ],
+  "crop_coordinate_order": [
+    "width",
+    "height",
+    "x",
+    "y"
+  ],
+  "notes": "Separate crops from the six-panel real-robot montage. Straight cuts; original timebase preserved, no additional speed-up, captions, synthetic frames, or audio. Ended before the slide transition.",
+  "output": {
+    "size": [
+      480,
+      360
+    ],
+    "frames": 240,
+    "fps": 12,
+    "duration": 20.0,
+    "bytes": 11355336,
+    "loop": 0
+  }
+}

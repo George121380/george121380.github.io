@@ -26,11 +26,11 @@ The subsequent refinement shortens the introduction, places the research focus a
 
 The latest pass raises body copy to 16–17px, publication titles to 18px, authors to 14–14.5px, and publication metadata to 14–15px. It widens the desktop column modestly, keeps mobile text readable, and makes the research introduction more direct.
 
-Liber-0 now uses a continuously looping GIF without player controls. BiDexAffordance has a new conceptual method illustration based on the existing paper; the other two paper illustrations are unchanged. Source clips, edit ranges, scientific grounding, and the image-generation prompt are recorded in `design-notes/media-provenance.md`.
+Liber-0 uses a 13-second continuously looping GIF edited from the user-provided official 4K release video. BiDexAffordance uses a 20-second GIF of real robots grasping a pot, a basket, and a pump bottle, cropped from the user-specified research project's supplementary video. Both play as ordinary animated images without player controls. Reduced-motion visitors receive static frames. Image captions have been removed; the other two paper illustrations are unchanged. Sources, edit ranges, and rollback assets are recorded in `design-notes/media-provenance.md`.
 
 ## Review and rollback
 
-The adjacent `homepage-design-review-20261103` directory contains a review page, the original HTML/CSS, the first design draft, and `academic-v2` and `academic-v3` snapshots of preceding academic designs. It is separate from website deployment files. To reopen it:
+The adjacent `homepage-design-review-20261103` directory contains a review page, the original HTML/CSS, the first design draft, and `academic-v2`, `academic-v3`, and `academic-v4` snapshots of preceding academic designs. It is separate from website deployment files. To reopen it:
 
 ```sh
 python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-review-20261103
@@ -38,7 +38,7 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-revi
 
 Open http://127.0.0.1:8766/ for desktop, mobile-width, and comparison with the previous academic design. The website also opens directly from this worktree's `index.html` without a running server.
 
-To reject the draft, continue using the original `george121380.github.io` checkout. The preceding static refinement is preserved at commit `40cf6a7` and in the `academic-v3` comparison snapshot. This media/readability pass is a separate commit and can be undone with `git revert <media-commit>`. Earlier academic design commits are `40cf6a7` and `0c869fb`; to undo the whole redesign after merging, revert these changes in reverse chronological order. Do not reset or force-push shared history. No deployment or push is performed as part of preparing this draft.
+To reject the draft, continue using the original `george121380.github.io` checkout. The preceding media revision is preserved at commit `c7548e3` and in the `academic-v4` comparison snapshot. This official-video/real-robot pass is a separate commit and can be undone with `git revert <media-revision-commit>`. Earlier academic design commits are `c7548e3`, `40cf6a7`, and `0c869fb`; to undo the whole redesign after merging, revert these changes in reverse chronological order. Do not reset or force-push shared history. No deployment or push is performed as part of preparing this draft.
 
 ## Content and design references
 
@@ -47,7 +47,7 @@ To reject the draft, continue using the original `george121380.github.io` checko
 - Academic layout references: https://jonbarron.info/ and https://web.mit.edu/phillipi/
 - Additional references reviewed: https://www.vincentsitzmann.com/ and https://jiayuanm.com/
 - Liber-0 technical report: https://www.liberai.com/blog/liber0/
-- Liber-0 robot image: resized from https://www.liberai.com/research/liber0/images/milk-tea-final-poster.webp. The caption describes the autonomous boba demonstration without labeling this particular workflow zero-shot.
+- Earlier Liber-0 robot image: resized from https://www.liberai.com/research/liber0/images/milk-tea-final-poster.webp. The drink-making workflow is not labeled zero-shot.
 - Earlier Liber-0 preview retained for comparison: resized from the official release's `/research/liber0/images/liber0-launch-cover-11s-poster.webp`.
 
 The local original snapshot intentionally retains the original source. It is for comparison, not a second deployment target.
