@@ -27,9 +27,9 @@
         <p>I’m an early intern at <a href="https://www.liberai.com/">LiberAI</a>, working on world action models and large-scale training. I contributed to <a href="#liber0">Liber-0</a>. I’m also a senior undergraduate in computer science at <a href="https://english.pku.edu.cn/">Peking University</a>, advised by <a href="https://zsdonghao.github.io/">Prof. Hao Dong</a>.</p>
         <p>Previously, I was a visiting student at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>, advised by <a href="https://jiayuanm.com/">Jiayuan Mao</a>, and an exchange student and research intern at <a href="https://bair.berkeley.edu/">UC Berkeley / BAIR</a>.</p>
         <nav class="profile-links" aria-label="Contact and professional profiles">
-          <a href="mailto:peiqiliu@stu.pku.edu.cn">Email</a><span aria-hidden="true">/</span>
-          <a href="https://github.com/George121380">GitHub</a><span aria-hidden="true">/</span>
-          <a href="https://www.linkedin.com/in/peiqi-liu-780703317/">LinkedIn</a><span aria-hidden="true">/</span>
+          <a href="mailto:peiqiliu@stu.pku.edu.cn">Email</a>
+          <a href="https://github.com/George121380">GitHub</a>
+          <a href="https://www.linkedin.com/in/peiqi-liu-780703317/">LinkedIn</a>
           <a href="https://app.reclaim.ai/m/peiqi-liu/chat-with-me">Book a meeting</a>
         </nav>
       </div>
@@ -38,16 +38,19 @@
 
     <section id="research" class="research-intro" aria-labelledby="research-heading">
       <h2 id="research-heading">Research</h2>
-      <p>How can robots learn new skills from limited experience and apply them to unfamiliar tasks? My work spans <strong>world action models, dexterous manipulation, and lifelong learning</strong>, with a focus on efficient skill acquisition and adaptation.</p>
-      <p>My long-term goal is to build robots that learn as efficiently as humans and help with everyday physical work. I’m pursuing this across learning algorithms and robot hardware.</p>
+      <p>I study how robots can learn new skills from limited experience and adapt to unfamiliar tasks. My work spans <strong>world action models, dexterous manipulation, and lifelong learning</strong>.</p>
+      <p>I want to build robots that learn efficiently and help with everyday physical work, connecting learning algorithms with robot hardware.</p>
     </section>
 
     <section id="work" aria-labelledby="work-heading">
       <div class="section-heading"><h2 id="work-heading">Selected work</h2></div>
       <article id="liber0" class="publication industry-project" aria-labelledby="liber0-title">
         <figure class="project-figure">
-          <a class="paper-visual" href="https://www.liberai.com/blog/liber0/" aria-label="Read the Liber-0 release"><img src="images/my_papers/liber0-robot.webp" alt="The LEO robot preparing boba tea autonomously with Liber-0" width="720" height="405" loading="lazy"></a>
-          <figcaption>Autonomous boba tea preparation with Liber-0.</figcaption>
+          <picture>
+            <source media="(prefers-reduced-motion: reduce)" srcset="images/my_papers/liber0-video-poster.webp">
+            <img class="project-animation" src="images/my_papers/liber0-highlights.gif" alt="Looping Liber-0 demonstrations: boba tea preparation, cup placement, and packing and storage" width="480" height="270" loading="lazy">
+          </picture>
+          <figcaption>Selected demonstrations · LiberAI</figcaption>
         </figure>
         <div class="paper-copy">
           <h3 id="liber0-title"><a href="https://www.liberai.com/blog/liber0/">Liber-0: Emergent Zero-Shot Capabilities in Multi-Step Manipulation from 2.2 Million-Hour Human Experience</a></h3>
@@ -59,12 +62,15 @@
         </div>
       </article>
       <article id="bidex" class="publication" aria-labelledby="bidex-title">
-        <button class="paper-visual" type="button" data-figure="images/my_papers/BiDexAffordance4.png" data-caption="BiDexAffordance: collaborative affordances for bimanual dexterous grasping" aria-label="Enlarge BiDexAffordance research figure"><img src="images/my_papers/bidex-preview.webp" alt="Object affordance maps and a robot grasping a pot with two dexterous hands" width="700" height="428" loading="lazy"></button>
+        <figure class="project-figure method-figure">
+          <button class="paper-visual" type="button" data-figure="images/my_papers/bidex-method-illustration.png" data-caption="BiDexAffordance: first-contact prediction, conditional complementary contact prediction, and joint physical refinement. Conceptual illustration." aria-label="Enlarge BiDexAffordance method illustration"><img src="images/my_papers/bidex-method-preview.webp" alt="A first contact guides a complementary second contact; joint physical refinement produces a two-handed dexterous grasp" width="840" height="630" loading="lazy"></button>
+          <figcaption>Illustrated method overview</figcaption>
+        </figure>
         <div class="paper-copy">
           <h3 id="bidex-title">BiDexAffordance: Learning Collaborative Affordances for Efficient Bimanual Dexterous Grasping</h3>
           <p class="authors"><strong>Peiqi Liu</strong>, Jingwen Li, Zeyuan Chen, Yue Chen, Shuqi Zhao, Yuanpei Chen, Chenfeng Xu, Masayoshi Tomizuka, Wei Zhan, Ruihai Wu</p>
           <div class="paper-meta"><span class="venue">RSS 2026 Workshop</span></div>
-          <p class="paper-description">Object-centric, physics-grounded affordance maps for robust bimanual dexterous grasping across diverse and unseen objects.</p>
+          <p class="paper-description">Predicting complementary contact regions for two hands, then jointly refining wrist and finger configurations for stable grasping.</p>
         </div>
       </article>
       <article id="leap" class="publication" aria-labelledby="leap-title">

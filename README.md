@@ -22,9 +22,15 @@ Changes:
 
 The subsequent refinement shortens the introduction, places the research focus and Liber-0 contribution near the top, improves publication typography, and uses an official robot demonstration image for Liber-0. It keeps contribution claims limited to the user's confirmed internship involvement.
 
+## Animation and reading refinement
+
+The latest pass raises body copy to 16–17px, publication titles to 18px, authors to 14–14.5px, and publication metadata to 14–15px. It widens the desktop column modestly, keeps mobile text readable, and makes the research introduction more direct.
+
+Liber-0 now uses a continuously looping GIF without player controls. BiDexAffordance has a new conceptual method illustration based on the existing paper; the other two paper illustrations are unchanged. Source clips, edit ranges, scientific grounding, and the image-generation prompt are recorded in `design-notes/media-provenance.md`.
+
 ## Review and rollback
 
-The adjacent `homepage-design-review-20261103` directory contains a review page, the original HTML/CSS, the first design draft, and an `academic-v2` snapshot of the previous academic design. It is separate from website deployment files. To reopen it:
+The adjacent `homepage-design-review-20261103` directory contains a review page, the original HTML/CSS, the first design draft, and `academic-v2` and `academic-v3` snapshots of preceding academic designs. It is separate from website deployment files. To reopen it:
 
 ```sh
 python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-review-20261103
@@ -32,7 +38,7 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-revi
 
 Open http://127.0.0.1:8766/ for desktop, mobile-width, and comparison with the previous academic design. The website also opens directly from this worktree's `index.html` without a running server.
 
-To reject the draft, continue using the original `george121380.github.io` checkout. The previous academic design is preserved at commit `0c869fb`. The refinement is a separate commit and can be undone with `git revert <refinement-commit>`. If the full redesign is later merged, revert the refinement and then `0c869fb`; do not reset or force-push shared history. No deployment or push is performed as part of preparing this draft.
+To reject the draft, continue using the original `george121380.github.io` checkout. The preceding static refinement is preserved at commit `40cf6a7` and in the `academic-v3` comparison snapshot. This media/readability pass is a separate commit and can be undone with `git revert <media-commit>`. Earlier academic design commits are `40cf6a7` and `0c869fb`; to undo the whole redesign after merging, revert these changes in reverse chronological order. Do not reset or force-push shared history. No deployment or push is performed as part of preparing this draft.
 
 ## Content and design references
 

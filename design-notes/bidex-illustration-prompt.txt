@@ -1,0 +1,16 @@
+Use case: scientific-educational.
+Create a new, publication-quality conceptual illustration for BiDexAffordance, to replace the simple project thumbnail on an academic researcher's homepage. Landscape 4:3 composition, clean white background. This is an explanatory drawing, not a photograph of experimental results.
+
+Reference image 1 is the old thumbnail: use it ONLY to understand the two-hand grasp and pot geometry. Reference image 2 is page 3 of the paper: use it ONLY for scientific grounding. Do not imitate its colored panels or reproduce any numbers, tables, text blocks, brand names or layout.
+
+SCIENTIFIC CONTENT:
+The method predicts a first surface-contact heatmap on an object point cloud, chooses a first contact, then predicts a complementary second-hand heatmap conditioned on that selected first contact. The contact pair initializes wrist poses. A coupled physical optimizer refines BOTH wrists and articulated fingers to produce a stable bimanual dexterous grasp. Contact prediction is sequential inference, not sequential physical execution. It is NOT two independent hand predictions. The maps guide initialization, not hard constraints on final contacts.
+
+COMPOSITION:
+Use three clear, spacious illustrated stages, only three short text labels.
+Top half: two views of the SAME elegant grey pot with two opposite loop handles, rendered as fine, coherent point clouds with subtle CAD form. First view on the upper left has a blue heat patch on the left handle and a small dark-blue selected contact point. Second view on the upper right retains the blue selected point on its left handle and shows a complementary muted amber heat patch on the RIGHT handle. A thin horizontal dark-grey arrow connects these two views, conveying conditioning. Under each view place exactly “1  First contact” and “2  Conditional contact”.
+Bottom half: a larger beautifully drawn grey pot, same geometry, centered, with TWO anatomically coherent articulated robot hands entering diagonally from left and right, each gripping one opposite handle. Each dexterous hand has five clearly plausible fingers and rigid mechanical joints. Do not draw a full robot body or a human. Use very subtle matching blue and amber accents on the corresponding wrists. A single thin connector arrow leads from the second-contact stage down to this final stage. Beneath it place exactly “3  Joint refinement”.
+Show the solid final pot with clean engineering form, modest shading and minimal ground shadow. All hands, fingers, handles and arrows must be distinct and physically comprehensible.
+
+STYLE:
+Precise technical editorial illustration with refined CAD-like forms, crisp fine outlines, white and warm neutral grey, restrained navy-blue and amber accents only for contact correspondence. Not a glossy AI infographic. No rounded colored panels, no bright gradients, no neon, no floating icons, no decorative symbols, no badges, no large title. Generous visual breathing room but avoid excessive outer whitespace. Large restrained Helvetica-like labels, readable when the image is reduced to 280 pixels wide. Image should be visually polished and explain the contribution at a glance. No quantitative claims or fake experimental images.
