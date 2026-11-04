@@ -23,8 +23,9 @@
     <header id="about" class="profile">
       <div class="profile-copy">
         <h1>Peiqi Liu <span lang="zh">刘沛淇</span></h1>
-        <p>I’m a senior undergraduate studying computer science at <a href="https://english.pku.edu.cn/">Peking University</a>, advised by <a href="https://zsdonghao.github.io/">Prof. Hao Dong</a>. I’m also an early intern at <a href="https://www.liberai.com/">LiberAI</a>, working on world action model architecture and large-scale training.</p>
-        <p>Previously, I was a visiting student at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>, advised by <a href="https://jiayuanm.com/">Jiayuan Mao</a> in the groups of <a href="https://people.csail.mit.edu/lpk/">Leslie Pack Kaelbling</a> and <a href="https://cocosci.mit.edu/josh">Josh Tenenbaum</a>. I also spent a semester on exchange at <a href="https://www.berkeley.edu/">UC Berkeley</a> and interned with <a href="https://bair.berkeley.edu/">BAIR</a>.</p>
+        <p class="profile-focus">Robot learning &amp; embodied intelligence</p>
+        <p>I’m an early intern at <a href="https://www.liberai.com/">LiberAI</a>, working on world action models and large-scale training. I contributed to <a href="#liber0">Liber-0</a>. I’m also a senior undergraduate in computer science at <a href="https://english.pku.edu.cn/">Peking University</a>, advised by <a href="https://zsdonghao.github.io/">Prof. Hao Dong</a>.</p>
+        <p>Previously, I was a visiting student at <a href="https://www.csail.mit.edu/">MIT CSAIL</a>, advised by <a href="https://jiayuanm.com/">Jiayuan Mao</a>, and an exchange student and research intern at <a href="https://bair.berkeley.edu/">UC Berkeley / BAIR</a>.</p>
         <nav class="profile-links" aria-label="Contact and professional profiles">
           <a href="mailto:peiqiliu@stu.pku.edu.cn">Email</a><span aria-hidden="true">/</span>
           <a href="https://github.com/George121380">GitHub</a><span aria-hidden="true">/</span>
@@ -37,25 +38,27 @@
 
     <section id="research" class="research-intro" aria-labelledby="research-heading">
       <h2 id="research-heading">Research</h2>
-      <p>I want to build robots that acquire new skills as efficiently as humans, generalize to unfamiliar tasks, and help with everyday physical work. My interests lie in <strong>world models, dexterous manipulation, and lifelong learning</strong>, with an emphasis on representations that make skill acquisition and adaptation more efficient.</p>
-      <p>I’m growing into a full-stack robotics researcher, working across algorithms and hardware.</p>
-      <p class="recent"><span class="recent-label">Recently</span> I contributed to the development of <a href="https://www.liberai.com/blog/liber0/">Liber-0</a> during my internship at LiberAI. <a class="release-link" href="https://www.liberai.com/blog/liber0/">Read the release →</a></p>
+      <p>How can robots learn new skills from limited experience and apply them to unfamiliar tasks? My work spans <strong>world action models, dexterous manipulation, and lifelong learning</strong>, with a focus on efficient skill acquisition and adaptation.</p>
+      <p>My long-term goal is to build robots that learn as efficiently as humans and help with everyday physical work. I’m pursuing this across learning algorithms and robot hardware.</p>
     </section>
 
     <section id="work" aria-labelledby="work-heading">
-      <div class="section-heading"><h2 id="work-heading">Selected research &amp; projects</h2><span class="section-note">* Equal contribution</span></div>
-      <article class="publication industry-project" aria-labelledby="liber0-title">
-        <a class="paper-visual" href="https://www.liberai.com/blog/liber0/" aria-label="Read the Liber-0 release"><img src="images/my_papers/liber0-preview.webp" alt="Scenes of human manipulation experience used in the Liber-0 project" width="720" height="405" loading="lazy"></a>
+      <div class="section-heading"><h2 id="work-heading">Selected work</h2></div>
+      <article id="liber0" class="publication industry-project" aria-labelledby="liber0-title">
+        <figure class="project-figure">
+          <a class="paper-visual" href="https://www.liberai.com/blog/liber0/" aria-label="Read the Liber-0 release"><img src="images/my_papers/liber0-robot.webp" alt="The LEO robot preparing boba tea autonomously with Liber-0" width="720" height="405" loading="lazy"></a>
+          <figcaption>Autonomous boba tea preparation with Liber-0.</figcaption>
+        </figure>
         <div class="paper-copy">
           <h3 id="liber0-title"><a href="https://www.liberai.com/blog/liber0/">Liber-0: Emergent Zero-Shot Capabilities in Multi-Step Manipulation from 2.2 Million-Hour Human Experience</a></h3>
           <p class="authors">LiberAI Team</p>
           <div class="paper-meta"><span class="venue">LiberAI, 2026</span><span class="project-type">Industry project</span></div>
-          <p class="paper-description">A world action model that learns from large-scale human experience for generalizable robotic manipulation.</p>
-          <p class="contribution">I contributed to its research and development as an intern at LiberAI.</p>
-          <div class="paper-links"><a href="https://www.liberai.com/blog/liber0/">Technical report</a><span aria-hidden="true">/</span><a href="https://www.liberai.com/demo">Demos</a></div>
+          <p class="paper-description">A world action model that transfers large-scale human experience to robot manipulation, including zero-shot multi-step tasks.</p>
+          <p class="contribution"><strong>My role:</strong> research and development as a LiberAI intern.</p>
+          <div class="paper-links"><a href="https://www.liberai.com/blog/liber0/">Technical report</a><a href="https://www.liberai.com/demo">Demos</a></div>
         </div>
       </article>
-      <article class="publication" aria-labelledby="bidex-title">
+      <article id="bidex" class="publication" aria-labelledby="bidex-title">
         <button class="paper-visual" type="button" data-figure="images/my_papers/BiDexAffordance4.png" data-caption="BiDexAffordance: collaborative affordances for bimanual dexterous grasping" aria-label="Enlarge BiDexAffordance research figure"><img src="images/my_papers/bidex-preview.webp" alt="Object affordance maps and a robot grasping a pot with two dexterous hands" width="700" height="428" loading="lazy"></button>
         <div class="paper-copy">
           <h3 id="bidex-title">BiDexAffordance: Learning Collaborative Affordances for Efficient Bimanual Dexterous Grasping</h3>
@@ -64,24 +67,24 @@
           <p class="paper-description">Object-centric, physics-grounded affordance maps for robust bimanual dexterous grasping across diverse and unseen objects.</p>
         </div>
       </article>
-      <article class="publication" aria-labelledby="leap-title">
+      <article id="leap" class="publication" aria-labelledby="leap-title">
         <button class="paper-visual" type="button" data-figure="images/my_papers/LEAP.png" data-caption="LEAP: learning abstractions from interaction and human guidance" aria-label="Enlarge LEAP research figure"><img src="images/my_papers/leap-preview.webp" alt="LEAP learns reusable knowledge through interaction, abstraction, and human guidance" width="1000" height="333" loading="lazy"></button>
         <div class="paper-copy">
           <h3 id="leap-title">Lifelong Experience Abstraction and Planning</h3>
           <p class="authors"><strong>Peiqi Liu</strong>, <a href="https://cocosci.mit.edu/josh">Joshua B. Tenenbaum</a>, <a href="https://people.csail.mit.edu/lpk/">Leslie Pack Kaelbling</a>, <a href="https://jiayuanm.com/">Jiayuan Mao</a></p>
-          <div class="paper-meta"><span class="venue">ICML 2025 Workshop on Programmatic Representations for Agent Learning</span><span class="oral">Oral presentation</span></div>
+          <div class="paper-meta"><span class="venue">ICML 2025 · PRAL Workshop</span><span class="oral">Oral</span></div>
           <p class="paper-description">A framework for lifelong experience abstraction and planning, enabling agents to learn and adapt across environments and tasks.</p>
-          <div class="paper-links"><a href="data/LEAP.pdf">Paper </a><a href="https://github.com/George121380/LEAP">Code </a><a href="https://icml.cc/virtual/2025/workshop/39950">Workshop </a></div>
+          <div class="paper-links"><a href="data/LEAP.pdf">Paper</a><a href="https://github.com/George121380/LEAP">Code</a><a href="https://icml.cc/virtual/2025/workshop/39950">Workshop</a></div>
         </div>
       </article>
-      <article class="publication" aria-labelledby="moddn-title">
+      <article id="moddn" class="publication" aria-labelledby="moddn-title">
         <button class="paper-visual" type="button" data-figure="images/my_papers/Mo-ddn.png" data-caption="MO-DDN: connecting human needs to object attributes and navigation" aria-label="Enlarge MO-DDN research figure"><img src="images/my_papers/moddn-preview.webp" alt="An agent maps household needs to object attributes and plans a route through a home" width="900" height="503" loading="lazy"></button>
         <div class="paper-copy">
           <h3 id="moddn-title">MO-DDN: A Coarse-to-Fine Attribute-based Exploration Agent for Multi-object Demand-driven Navigation</h3>
           <p class="authors"><a href="https://whcpumpkin.github.io/">Hongcheng Wang*</a>, <strong>Peiqi Liu*</strong>, <a href="https://wzcai99.github.io/">Wenzhe Cai</a>, <a href="https://aaronanima.github.io/">Mingdong Wu</a>, Zhengyu Qian, <a href="https://zsdonghao.github.io/">Hao Dong</a></p>
           <div class="paper-meta"><span class="venue">NeurIPS 2024</span></div>
           <p class="paper-description">A multi-object demand-driven navigation benchmark and a coarse-to-fine exploration agent that connects human needs to object attributes.</p>
-          <div class="paper-links"><a href="https://arxiv.org/abs/2410.03488">Paper </a><a href="https://sites.google.com/view/moddn">Project </a><span class="equal-contribution">* Equal contribution</span></div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2410.03488">Paper</a><a href="https://sites.google.com/view/moddn">Project</a><span class="equal-contribution">* Equal contribution</span></div>
         </div>
       </article>
     </section>
@@ -90,7 +93,7 @@
       <div class="experience-list">
         <article class="experience-row" id="liberai">
           <div class="institution-logo"><img src="images/company_logos/liberai.svg" alt="LiberAI" width="90" height="48" loading="lazy"></div>
-          <div class="experience-content"><div class="experience-heading"><h3><a href="https://www.liberai.com/">LiberAI <span lang="zh">将闲科技</span></a></h3><span class="date">Apr 2026 – Present</span></div><p class="role">Early Intern</p><p>World action model architecture and large-scale training. Contributed to <a href="https://www.liberai.com/blog/liber0/">Liber-0</a>.</p></div>
+          <div class="experience-content"><div class="experience-heading"><h3><a href="https://www.liberai.com/">LiberAI <span lang="zh">将闲科技</span></a></h3><span class="date">Apr 2026 – Present</span></div><p class="role">Early Intern</p><p>World action model architecture and large-scale training.</p></div>
         </article>
         <article class="experience-row" id="berkeley">
           <div class="institution-logo"><img src="images/schools_logos/bkl.png" alt="UC Berkeley" width="64" height="64" loading="lazy"></div>
@@ -108,9 +111,9 @@
     </section>
     <section id="contact" class="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Get in touch</h2>
-      <p>I’m always happy to discuss research ideas, robotics, and opportunities to work together.<br><a href="mailto:peiqiliu@stu.pku.edu.cn">peiqiliu@stu.pku.edu.cn</a> · <a href="https://app.reclaim.ai/m/peiqi-liu/chat-with-me">Schedule a conversation</a></p>
+      <p>I’m happy to talk about robot learning, research ideas, and working together.<br><a href="mailto:peiqiliu@stu.pku.edu.cn">peiqiliu@stu.pku.edu.cn</a> · <a href="https://app.reclaim.ai/m/peiqi-liu/chat-with-me">Book a meeting</a></p>
     </section>
-    <footer><span>© 2026 Peiqi Liu</span><span>Updated November 2026</span></footer>
+    <footer><span>© 2026 Peiqi Liu</span><span>Updated November 2026</span><a href="#about">Back to top ↑</a></footer>
   </main>
   <dialog id="figure-dialog" aria-labelledby="figure-caption">
     <button class="dialog-close" type="button" aria-label="Close enlarged figure">Close ×</button>
