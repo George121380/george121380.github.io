@@ -26,11 +26,11 @@ The subsequent refinement shortens the introduction, places the research focus a
 
 The latest pass raises body copy to 16–17px, publication titles to 18px, authors to 14–14.5px, and publication metadata to 14–15px. It widens the desktop column modestly, keeps mobile text readable, and makes the research introduction more direct.
 
-Liber-0 uses a 13-second continuously looping GIF edited from the user-provided official 4K release video. BiDexAffordance uses a 20-second GIF of real robots grasping a pot, a basket, and a pump bottle, cropped from the user-specified research project's supplementary video. Both play as ordinary animated images without player controls. Reduced-motion visitors receive static frames. Image captions have been removed; the other two paper illustrations are unchanged. Sources, edit ranges, and rollback assets are recorded in `design-notes/media-provenance.md`.
+Liber-0 uses a 13-second continuously looping GIF edited from the user-provided official 4K release video. BiDexAffordance uses a 13.1-second research reel: paired contact heatmaps for three objects, four grasp-refinement visualizations, and the original six-panel real-robot montage. Both use 16:9 animated images without player controls. Reduced-motion visitors receive static frames. Image captions have been removed; the other two paper illustrations are unchanged. Sources, edit ranges, and rollback assets are recorded in `design-notes/media-provenance.md`.
 
 ## Review and rollback
 
-The adjacent `homepage-design-review-20261103` directory contains a review page, the original HTML/CSS, the first design draft, and `academic-v2`, `academic-v3`, and `academic-v4` snapshots of preceding academic designs. It is separate from website deployment files. To reopen it:
+The adjacent `homepage-design-review-20261103` directory contains a review page, the original HTML/CSS, the first design draft, and `academic-v2` through `academic-v5` snapshots of preceding academic designs. It is separate from website deployment files. To reopen it:
 
 ```sh
 python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-review-20261103
@@ -38,7 +38,7 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-revi
 
 Open http://127.0.0.1:8766/ for desktop, mobile-width, and comparison with the previous academic design. The website also opens directly from this worktree's `index.html` without a running server.
 
-To reject the draft, continue using the original `george121380.github.io` checkout. The preceding media revision is preserved at commit `c7548e3` and in the `academic-v4` comparison snapshot. This official-video/real-robot pass is a separate commit and can be undone with `git revert <media-revision-commit>`. Earlier academic design commits are `c7548e3`, `40cf6a7`, and `0c869fb`; to undo the whole redesign after merging, revert these changes in reverse chronological order. Do not reset or force-push shared history. No deployment or push is performed as part of preparing this draft.
+To reject the draft, continue using the original `george121380.github.io` checkout. The preceding media revision is preserved at commit `4c4759c` and in the `academic-v5` comparison snapshot. This BiDex research-reel pass is a separate commit and can be undone with `git revert <research-reel-commit>`. Earlier academic design commits are `4c4759c`, `c7548e3`, `40cf6a7`, and `0c869fb`; to undo the whole redesign after merging, revert these changes in reverse chronological order. Do not reset or force-push shared history. No deployment or push is performed as part of preparing this draft.
 
 ## Content and design references
 

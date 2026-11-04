@@ -1,0 +1,103 @@
+{
+  "sources": [
+    "2026-ECCV-BiDexAffordance/supp/BiDexAffordance_ICRA2027.mp4",
+    "2026-ECCV-BiDexAffordance/videos_ours/100015_pose0.mp4",
+    "2026-ECCV-BiDexAffordance/videos_ours/100015_pose3.mp4",
+    "2026-ECCV-BiDexAffordance/videos_ours/100015_pose5.mp4",
+    "2026-ECCV-BiDexAffordance/videos_ours/100015_pose6.mp4"
+  ],
+  "scenes": [
+    {
+      "scene": "Paired contact predictions for three objects",
+      "source_range": [
+        74,
+        77
+      ],
+      "layout": "3 columns, 2 rows. First contact predictions above the conditional second-contact predictions for the same objects.",
+      "source_crops": [
+        [
+          "pot, first",
+          690,
+          70,
+          410,
+          290
+        ],
+        [
+          "bottle, first",
+          750,
+          350,
+          340,
+          400
+        ],
+        [
+          "boot, first",
+          660,
+          750,
+          440,
+          320
+        ],
+        [
+          "pot, second",
+          1080,
+          70,
+          420,
+          290
+        ],
+        [
+          "bottle, second",
+          1110,
+          350,
+          340,
+          400
+        ],
+        [
+          "boot, second",
+          1030,
+          750,
+          440,
+          320
+        ]
+      ]
+    },
+    {
+      "scene": "Four grasp refinement examples",
+      "source_range": [
+        0.4,
+        3.2
+      ],
+      "poses": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "crop": [
+        1100,
+        800,
+        90,
+        260
+      ],
+      "layout": "2 columns, 2 rows; preserved original motion and objects."
+    },
+    {
+      "scene": "Six real-robot experiments",
+      "source_range": [
+        276.3,
+        283.6
+      ],
+      "layout": "Original 3-column, 2-row montage retained in full; no per-panel zoom."
+    }
+  ],
+  "notes": "Selected qualitative demonstrations. No aggregate metric claims, added captions, generated imagery, speed changes or synthetic motion. Spatial crop and layout of existing scientific imagery only. Original recordings remain unchanged.",
+  "output": {
+    "size": [
+      640,
+      360
+    ],
+    "fps": 20,
+    "frames": 262,
+    "seconds": 13.1,
+    "loop": 0,
+    "bytes": 16040787
+  }
+}

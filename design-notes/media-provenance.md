@@ -16,9 +16,21 @@ All clips come from LiberAI's official [Liber-0 release](https://www.liberai.com
 - [Cup placement](https://www.liberai.com/blog/liber0/assets/optimized-videos/cup-placement.dfeba6c4ccd9.mp4): 0.00–7.16 seconds of the official source.
 - [Packing and storage](https://www.liberai.com/blog/liber0/assets/optimized-videos/packing-and-storage.ccede31a7dff.mp4): 8.50–23.10 seconds of the official source.
 
-## Active BiDexAffordance loop: real-robot experiments
+## Active BiDexAffordance loop: method, simulation, and real-robot montage
 
-The homepage uses `images/my_papers/bidex-real-robot-loop.gif`: 480 × 360, 240 frames, 12 fps, 20 seconds, infinite loop, about 11.4 MB. The reduced-motion poster is `images/my_papers/bidex-real-robot-poster.webp`. This replaces the generated illustration and the subsequent line drawing. No caption or player controls appear below either project animation.
+The homepage uses `images/my_papers/bidex-research-reel.gif`: 640 × 360, 262 frames, 20 fps, 13.1 seconds, infinite loop. Both homepage project animations now share a 16:9 aspect ratio. The reduced-motion poster is `images/my_papers/bidex-research-poster.webp`, taken from the grasp-refinement scene. There are no captions, playback controls, added metrics, or generated illustrations.
+
+The source is the full 306.9-second submission video in the user-supplied research directory, `2026-ECCV-BiDexAffordance/supp/BiDexAffordance_ICRA2027.mp4`, supplemented by the project's original `videos_ours/100015_pose{0,3,5,6}.mp4` optimization recordings. The edit contains:
+
+- **Contact priors (3.0 s):** The original pot, bottle, and boot heatmaps from 74–77 s, cropped and arranged in three columns. Each object's first-contact prediction is above its conditional second-contact prediction. The heatmap colors and geometry are unchanged. The original background object images and color bar are outside the crop; no numerical interpretation of the scores is added.
+- **Grasp refinement (2.8 s):** Four original optimization clips, each from 0.4–3.2 s, shown simultaneously in a 2 × 2 arrangement. Both hands and their object are retained. Their playback speed is unchanged.
+- **Real robots (7.3 s):** 276.3–283.6 s of the submission video. The original six-panel montage is retained in full, showing six experiments together without an individual camera zoom. The clip ends before the conclusion-slide transition.
+
+The 960 × 540 master is `videos/bidex-research-reel.mp4`. Exact source files, crop coordinates, and timings are recorded in `design-notes/bidex-research-edit.json`. Source videos and the original paper images remain unchanged. These are selected qualitative demonstrations, not aggregate performance evidence. The previous close-up edit is retained below for rollback.
+
+## Previous BiDexAffordance loop: individual real-robot close-ups
+
+The preceding version uses `images/my_papers/bidex-real-robot-loop.gif`: 480 × 360, 240 frames, 12 fps, 20 seconds, infinite loop, about 11.4 MB. Its reduced-motion poster is `images/my_papers/bidex-real-robot-poster.webp`. It replaced the generated illustration and the subsequent line drawing.
 
 Source: `2026-ECCV-BiDexAffordance/supp/BiDexAffordance_ICRA2027.mp4` in the research directory explicitly supplied by the user. The 1920 × 1080, 60 fps, 306.9-second video contains a six-panel real-robot montage. The edit crops out three separate experiments, in order: cooking pot, basket, and pump bottle. Each excerpt uses 277.00–283.65 seconds, ending before the slide transition. The final edit is 20.0 seconds after frame-rate quantization.
 
