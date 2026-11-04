@@ -22,6 +22,8 @@ Changes:
 
 The subsequent refinement shortens the introduction, places the research focus and Liber-0 contribution near the top, improves publication typography, and uses an official robot demonstration image for Liber-0. It keeps contribution claims limited to the user's confirmed internship involvement.
 
+The current-status update adds a brief USC master's-student note and an experience entry with advisor Prof. Erdem Bıyık. The user confirmed USC enrollment in August 2026 and completion of the Peking University undergraduate program in June 2026. The page continues to lead with research and LiberAI work. The advisor's name and link were checked against https://ebiyik.github.io/; the small USC mark comes from the university's official website at https://www.usc.edu/wp-content/uploads/2025/11/cropped-usc_512x512-Android@1x-180x180.png.
+
 ## Animation and reading refinement
 
 The latest pass raises body copy to 16–17px, publication titles to 18px, authors to 14–14.5px, and publication metadata to 14–15px. It widens the desktop column modestly, keeps mobile text readable, and makes the research introduction more direct.
