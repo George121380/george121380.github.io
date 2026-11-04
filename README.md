@@ -6,7 +6,7 @@ Static source for https://peiqil.com/. Open `index.html` directly, or preview wi
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-No dependency installation or build is required. The page is readable without JavaScript; `site.js` adds an accessible figure viewer with Escape-to-close.
+No dependency installation or build is required. The page is readable without JavaScript, including static project previews; `site.js` adds automatic silent loops and an accessible figure viewer with Escape-to-close.
 
 ## November 2026 revision
 
@@ -26,7 +26,13 @@ The subsequent refinement shortens the introduction, places the research focus a
 
 The latest pass raises body copy to 16–17px, publication titles to 18px, authors to 14–14.5px, and publication metadata to 14–15px. It widens the desktop column modestly, keeps mobile text readable, and makes the research introduction more direct.
 
-Liber-0 uses a 13-second continuously looping GIF edited from the user-provided official 4K release video. BiDexAffordance uses a 13.1-second research reel: paired contact heatmaps for three objects, four grasp-refinement visualizations, and the original six-panel real-robot montage. Both use 16:9 animated images without player controls. Reduced-motion visitors receive static frames. Image captions have been removed; the other two paper illustrations are unchanged. Sources, edit ranges, and rollback assets are recorded in `design-notes/media-provenance.md`.
+Liber-0 uses a 13-second continuously looping edit from the user-provided official 4K release video. BiDexAffordance uses a 13.1-second research reel: paired contact heatmaps for three objects, four grasp-refinement visualizations, and the original six-panel real-robot montage. Both use 16:9 silent loops without player controls or a required click. Image captions have been removed; the other two paper illustrations are unchanged. Sources, edit ranges, and rollback assets are recorded in `design-notes/media-provenance.md`.
+
+### Fast initial display
+
+The active loops are now H.264 MP4s totaling 912,893 bytes, replacing 27,327,481 bytes of GIFs (96.7% smaller). Their first-frame WebP images total 10,176 bytes before base64 encoding and are embedded in the HTML, so a preview appears with the page without waiting for another image request. The video overlays its poster only after playback starts; blocked autoplay, missing JavaScript, or a media error leaves the poster visible.
+
+The MP4 metadata is placed at the start of each file for progressive playback. Videos load and play within 300px of the viewport and pause outside that area or while the tab is hidden. Reduced-motion visitors see static previews and do not start video downloads. Both clips retain the approved edit and aspect ratio. CSS and JavaScript URLs are versioned together to avoid mixing cached styles with the new markup.
 
 ## Review and rollback
 
@@ -38,7 +44,7 @@ python3 -m http.server 8766 --bind 127.0.0.1 --directory ../homepage-design-revi
 
 Open http://127.0.0.1:8766/ for desktop, mobile-width, and comparison with the previous academic design. The website also opens directly from this worktree's `index.html` without a running server.
 
-The preceding media revision is preserved at commit `4c4759c` and in the `academic-v5` comparison snapshot. The BiDex research-reel refinement is commit `74f643d`. Earlier academic design commits are `4c4759c`, `c7548e3`, `40cf6a7`, and `0c869fb`. To restore the entire pre-refresh homepage, restore the tree from `homepage-before-refresh-20261103` in a new commit and publish that commit through `master`. Individual changes can also be reverted normally. Do not reset or force-push shared history.
+The published version immediately before the loading optimization is preserved at commit `e9ddc2e` and tag `homepage-before-media-optimization-20261103`. The preceding media revision is preserved at commit `4c4759c` and in the `academic-v5` comparison snapshot. The BiDex research-reel refinement is commit `74f643d`. Earlier academic design commits are `4c4759c`, `c7548e3`, `40cf6a7`, and `0c869fb`. To restore the entire pre-refresh homepage, restore the tree from `homepage-before-refresh-20261103` in a new commit and publish that commit through `master`. Individual changes can also be reverted normally. Do not reset or force-push shared history.
 
 ## Content and design references
 

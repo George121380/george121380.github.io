@@ -50,6 +50,9 @@ a.paper-visual { cursor: pointer; }
 .paper-visual img { width: 100%; height: auto; max-height: 185px; object-fit: contain; border-radius: 3px; }
 .project-figure { min-width: 0; }
 .project-animation { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #f2f2f2; border-radius: 3px; }
+.project-motion { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 3px; }
+.project-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; pointer-events: none; }
+.project-motion.is-playing .project-video { opacity: 1; }
 .publication h3 { font-size: 18px; line-height: 1.45; font-weight: 600; letter-spacing: -.1px; }
 .publication h3 a { color: var(--ink); }
 .authors { font-size: 14.5px; color: #555b62; line-height: 1.7; margin-top: 7px; }
@@ -145,7 +148,10 @@ body:has(dialog[open]) { overflow: hidden; }
   .portrait img { width: 88px; height: 105px; }
   .profile-links { gap: 0 16px; font-size: 14px; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .project-video { display: none; }
+}
 @media print {
   body { font-size: 10pt; }
   .page { width: 100%; }

@@ -1,8 +1,23 @@
 # Homepage media provenance
 
-## Active Liber-0 loop: official release video
+## Current web delivery: small silent loops with inline posters
 
-The current homepage uses `images/my_papers/liber0-official-loop.gif`: 640 × 360, 195 frames, 15 fps, 13 seconds, infinite loop, about 11.3 MB. It is an ordinary image that loops automatically without player controls or a click. The poster for reduced-motion visitors is `images/my_papers/liber0-official-poster.webp`.
+The approved edits below are delivered as 640 × 360, 24 fps, silent H.264 MP4s with the metadata before the media payload (`+faststart`). They start automatically near the viewport, loop without controls, and pause outside the viewport margin or when the tab is hidden. The existing 16:9 framing, scene order, and six-panel robot layout are unchanged.
+
+| Active video | Editing source | Bytes |
+| --- | --- | ---: |
+| `videos/liber0-preview.mp4` | `videos/liber0-official-cut.mp4` | 435,483 |
+| `videos/bidex-preview.mp4` | `videos/bidex-research-reel.mp4` | 477,410 |
+
+Encoding: `scale=640:360:flags=lanczos,fps=24`, `libx264`, CRF 25, slow preset, Main profile, level 3.1, `yuv420p`, no audio, `+faststart`, source metadata removed. BiDex's duration rounds to 13.125 seconds at 24 fps.
+
+The first frame of each optimized video is stored as a 480 × 270 WebP at quality 76: `images/my_papers/liber0-inline-poster.webp` (5,652 bytes) and `images/my_papers/bidex-inline-poster.webp` (4,524 bytes). Exact copies are embedded as data URLs in `index.html`, eliminating separate poster requests. The poster remains visible until the video emits `playing`, and remains the fallback for blocked autoplay, video errors, disabled JavaScript, or reduced motion. Reduced-motion visitors do not initiate video requests.
+
+Combined video delivery is 912,893 bytes versus 27,327,481 bytes for the two prior GIFs, a 96.7% reduction. Earlier GIFs, posters, and masters are retained for rollback. Validation included Safari automatic playback and poster display with MP4 responses deliberately delayed 10 seconds, plus checks for reduced motion, rejected playback, tab visibility, media errors, and MP4 atom order.
+
+## Liber-0 edit: official release video
+
+The previous GIF delivery is retained as `images/my_papers/liber0-official-loop.gif`: 640 × 360, 195 frames, 15 fps, 13 seconds, infinite loop, about 11.3 MB. Its reduced-motion poster is `images/my_papers/liber0-official-poster.webp`.
 
 Source: the official 4K release MP4 supplied by the user on their Desktop (3840 × 2160, 172.82 seconds). Four excerpts show adding ingredients (129.3–131.7s), dispensing tea (135.2–138.7s), closing the cup (155.0–160.2s), and serving (161.0–163.0s). Original camera edits and 3× playback-speed labels are retained; no additional speed-up or graphic overlay was added. This application-specific drink workflow is not labeled zero-shot. The 960 × 540 editing master is `videos/liber0-official-cut.mp4`; it is not embedded as a player. Exact edit metadata is in `design-notes/liber0-official-edit.json`.
 
@@ -16,9 +31,9 @@ All clips come from LiberAI's official [Liber-0 release](https://www.liberai.com
 - [Cup placement](https://www.liberai.com/blog/liber0/assets/optimized-videos/cup-placement.dfeba6c4ccd9.mp4): 0.00–7.16 seconds of the official source.
 - [Packing and storage](https://www.liberai.com/blog/liber0/assets/optimized-videos/packing-and-storage.ccede31a7dff.mp4): 8.50–23.10 seconds of the official source.
 
-## Active BiDexAffordance loop: method, simulation, and real-robot montage
+## BiDexAffordance edit: method, simulation, and real-robot montage
 
-The homepage uses `images/my_papers/bidex-research-reel.gif`: 640 × 360, 262 frames, 20 fps, 13.1 seconds, infinite loop. Both homepage project animations now share a 16:9 aspect ratio. The reduced-motion poster is `images/my_papers/bidex-research-poster.webp`, taken from the grasp-refinement scene. There are no captions, playback controls, added metrics, or generated illustrations.
+The previous GIF delivery is retained as `images/my_papers/bidex-research-reel.gif`: 640 × 360, 262 frames, 20 fps, 13.1 seconds, infinite loop. Both homepage project animations share a 16:9 aspect ratio. The previous reduced-motion poster is `images/my_papers/bidex-research-poster.webp`, taken from the grasp-refinement scene. There are no captions, playback controls, added metrics, or generated illustrations.
 
 The source is the full 306.9-second submission video in the user-supplied research directory, `2026-ECCV-BiDexAffordance/supp/BiDexAffordance_ICRA2027.mp4`, supplemented by the project's original `videos_ours/100015_pose{0,3,5,6}.mp4` optimization recordings. The edit contains:
 
