@@ -36,6 +36,14 @@ The active loops are now H.264 MP4s totaling 912,893 bytes, replacing 27,327,481
 
 The MP4 metadata is placed at the start of each file for progressive playback. Videos load and play within 300px of the viewport and pause outside that area or while the tab is hidden. Reduced-motion visitors see static previews and do not start video downloads. Both clips retain the approved edit and aspect ratio. CSS and JavaScript URLs are versioned together to avoid mixing cached styles with the new markup.
 
+## RoboDojo result (November 9, 2026)
+
+The LiberAI experience entry now includes one sentence stating that Peiqi trained Liber-0 Preview, which ranked #1 on the RoboDojo simulation leaderboard on September 17, 2026. The training responsibility was explicitly confirmed by Peiqi. The result uses the existing secondary body-text styling and links to the official simulation leaderboard: https://robodojo-benchmark.com/leaderboard?bench=sim.
+
+The supplied screenshots `Downloads/IMG_7725.JPG` (rank #1, average score 30.74 / success rate 25.52%) and `Downloads/IMG_7724.JPG` (dated September 17, 2026, UTC+8) support the historical result. RoboDojo's official update log also records the addition of Liber-0 Preview and Liber-0 Lite on that date with matching scores. This is a dated simulation result, not a claim about the current ranking or the real-world leaderboard. The screenshots are reference material, not added to the page layout.
+
+The previous published revision is `32d4197`; this change can be reverted normally without resetting shared history.
+
 ## Review and rollback
 
 The adjacent `homepage-design-review-20261103` directory contains a review page, the original HTML/CSS, the first design draft, and `academic-v2` through `academic-v5` snapshots of preceding academic designs. It is separate from website deployment files. To reopen it:
